@@ -4,20 +4,14 @@ let sec1 = document.getElementById("tab-1");
 let sec2 = document.getElementById("tab-2");
 let sec3 = document.getElementById("tab-3");
 let sec4 = document.getElementById("tab-4");
-var i=0;
-var tabList=[sec1,sec2,sec3,sec4];
+var i = 0;
+var tabList = [sec0, sec1, sec2, sec3, sec4];
 
-function nextSection(){
+function nextSection() {
   i++;
-  // if(i>4)
-  //   i=0;
-  
+  if (i > 4) i = 0;
 
   tabList[i].style.display = "flex";
 
   tabList[i].scrollIntoView({ behavior: "smooth", display: "block" });
- 
-  
-
 }
-
