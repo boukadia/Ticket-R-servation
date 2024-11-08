@@ -187,26 +187,29 @@
             <h4>Adult (Prix 500DH)</h4>
             <div style="display: flex; align-items: center; gap: 10px">
               <button
+                type="button"
+                onclick="voyageurNumberPlus()"
                 style="
                   border-radius: 50%;
                   width: 50px;
                   height: 50px;
                   font-size: 15pt;
-                  color: #2e6c8e;
+                  color: #f07714;
                   background-color: #a6cde2;
                   border: 3px solid #2e6c8e;
                 "
               >
                 +
               </button>
-              <span>1</span>
+              <span id="voyageurscounter">0</span>
               <button
+                onclick="voyageurNumberMoin()"
                 style="
                   border-radius: 50%;
                   width: 50px;
                   height: 50px;
                   font-size: 15pt;
-                  color: #2e6c8e;
+                  color: #f07714;
                   background-color: #a6cde2;
                   border: 3px solid #2e6c8e;
                 "
@@ -220,26 +223,28 @@
             <h4>Enfant (Prix 100DH)</h4>
             <div style="display: flex; align-items: center; gap: 10px">
               <button
+                onclick="voyageurEnfantNumberPlus()"
                 style="
                   border-radius: 50%;
                   width: 50px;
                   height: 50px;
                   font-size: 15pt;
-                  color: #2e6c8e;
+                  color: #f07714;
                   background-color: #a6cde2;
                   border: 3px solid #2e6c8e;
                 "
               >
                 +
               </button>
-              <span>1</span>
+              <span id="voyageurscounterEnfant">0</span>
               <button
+                onclick="voyageurEnfantNumberMoin()"
                 style="
                   border-radius: 50%;
                   width: 50px;
                   height: 50px;
                   font-size: 15pt;
-                  color: #2e6c8e;
+                  color: #f07714;
                   background-color: #a6cde2;
                   border: 3px solid #2e6c8e;
                 "
@@ -363,7 +368,7 @@
             -
           </button>
         </div>
-        <h4>Prix Total : 0000DH</h4>
+        <h4>Prix Total : <span id="prixTotal"></span> DH</h4>
       </div>
 
       <div id="tab-4">
