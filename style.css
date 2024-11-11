@@ -152,3 +152,6 @@ section {
   transform: scale(1.1);
   background-color: antiquewhite;
 }
+#chaise input{
+  /* display: none; */
+}

@@ -22,7 +22,7 @@
       <div id="tab-1">
         <h1>La gare et la date</h1>
         <select
-          onchange="opt(this)"
+          onchange="gareDepart(this)"
           id="depart"
           style="
             margin-top: 10px;
@@ -41,7 +41,7 @@
           <option value="">casa</option>
         </select>
         <select
-          onchange="opt1(this)"
+          onchange="gareArriver(this)"
           id="arret"
           style="
             margin-top: 10px;
@@ -218,7 +218,7 @@
               </button>
             </div>
           </div>
-          <div style="width: 5px; background-color: #2e6c8e"></div>
+          <!-- <div style="width: 5px; background-color: #2e6c8e"></div> -->
           <div>
             <h4>Enfant (Prix 100DH)</h4>
             <div style="display: flex; align-items: center; gap: 10px">
@@ -263,7 +263,9 @@
             gap: 20px;
           "
         >
-          <button
+          <input
+            class="checkbox"
+            type="checkbox"
             style="
               border-radius: 5px;
               width: 50px;
@@ -273,10 +275,10 @@
               background-color: #a6cde2;
               border: 3px solid #2e6c8e;
             "
-          >
-            -
-          </button>
-          <button
+          />
+          <input
+            class="checkbox"
+            type="checkbox"
             style="
               border-radius: 5px;
               width: 50px;
@@ -286,10 +288,10 @@
               background-color: #a6cde2;
               border: 3px solid #2e6c8e;
             "
-          >
-            -
-          </button>
-          <button
+          />
+          <input
+            class="checkbox"
+            type="checkbox"
             style="
               border-radius: 5px;
               width: 50px;
@@ -299,10 +301,10 @@
               background-color: #a6cde2;
               border: 3px solid #2e6c8e;
             "
-          >
-            -
-          </button>
-          <button
+          />
+          <input
+            class="checkbox"
+            type="checkbox"
             style="
               border-radius: 5px;
               width: 50px;
@@ -312,10 +314,10 @@
               background-color: #a6cde2;
               border: 3px solid #2e6c8e;
             "
-          >
-            -
-          </button>
-          <button
+          />
+          <input
+            class="checkbox"
+            type="checkbox"
             style="
               border-radius: 5px;
               width: 50px;
@@ -325,10 +327,10 @@
               background-color: #a6cde2;
               border: 3px solid #2e6c8e;
             "
-          >
-            -
-          </button>
-          <button
+          />
+          <input
+            class="checkbox"
+            type="checkbox"
             style="
               border-radius: 5px;
               width: 50px;
@@ -338,10 +340,10 @@
               background-color: #a6cde2;
               border: 3px solid #2e6c8e;
             "
-          >
-            -
-          </button>
-          <button
+          />
+          <input
+            class="checkbox"
+            type="checkbox"
             style="
               border-radius: 5px;
               width: 50px;
@@ -351,10 +353,10 @@
               background-color: #a6cde2;
               border: 3px solid #2e6c8e;
             "
-          >
-            -
-          </button>
-          <button
+          />
+          <input
+            class="checkbox"
+            type="checkbox"
             style="
               border-radius: 5px;
               width: 50px;
@@ -364,9 +366,7 @@
               background-color: #a6cde2;
               border: 3px solid #2e6c8e;
             "
-          >
-            -
-          </button>
+          />
         </div>
         <h4>Prix Total : <span id="prixTotal"></span> DH</h4>
       </div>
