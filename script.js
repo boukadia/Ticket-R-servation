@@ -34,6 +34,10 @@ function nextSection() {
   tabList[i].style.display = "flex";
 
   tabList[i].scrollIntoView({ behavior: "auto", display: "block" });
+  if (i == 4) {
+    PrixCardEnfant();
+    PrixCardAdult();
+  }
 }
 
 function gareDepart(event) {
@@ -86,4 +90,50 @@ for (let i = 0; i < 8; i++) {
       alert("depasser la limite");
     }
   };
+}
+function PrixCardAdult() {
+  for (let z = 0; z < count; z++) {
+    // tableau+=`<span>${ prixCard.textContent=adultPrix }</span>`
+    table += `
+          <div id="cardContent"  style="
+            height: 20%;
+            display: flex;
+            flex-wrap:wrap;
+            justify-content: center;
+            align-items: center;
+          ">
+            <div class="user-info">
+              <p>Nom et prénom : <span>AZIZ</span></p>
+              <p>E-mail : <span>test.aziz@gmail.com</span></p>
+              <p >Date de réservation : <span id="dateCard">${
+                date.textContent
+              }</span></p>
+              <p >Prix : <span>${(prixCard.textContent)}</span></p>
+            </div>
+           `;
+
+    cardContent.innerHTML = table;
+  }
+}
+
+function PrixCardEnfant() {
+  for (let k = 0; k < c; k++) {
+    // tableau+=`<span>${ prixCard.textContent=adultPrix }</span>`
+    tableau += `
+          <div id="cardContent"  style="
+            height: 20%;
+            display: flex;
+            flex-wrap:wrap;
+            justify-content: center;
+            align-items: center;
+          ">
+            <div class="user-info">
+              <p>Nom et prénom : <span>AZIZ</span></p>
+              <p>E-mail : <span>test.aziz@gmail.com</span></p>
+              <p >Date de réservation : <span id="dateCard"></span></p>
+              <p >Prix : <span>${(prixCard.textContent)}</span></p>
+            </div>
+           `;
+    cardContent.innerHTML = tableau;
+  }
 }
