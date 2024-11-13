@@ -1,8 +1,15 @@
-body{
+body {
   background-image: url(./téléchargement.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
-  
+}
+@font-face {
+  font-family: ADLaMDisplay-Regular;
+  src: url(./ADLaMDisplay-Regular.ttf);
+}
+@font-face {
+  font-family: Roboto-Bold;
+  src: url(./Roboto-Bold.ttf);
 }
 .qr-code {
   bottom: 0;
@@ -24,15 +31,21 @@ body{
   border-radius: 20px;
   margin-bottom: 20%;
 }
+.tab-0-p {
+  font-size: 25px;
+  line-height: 30px;
+
+  font-family: ADLaMDisplay-Regular;
+}
 p {
   text-align: center;
-  
 }
 body {
   background-color: #a6cde2;
 }
 h1 {
   color: rgb(53, 53, 189);
+  font-family: Roboto-Bold;
 }
 .tab-1,
 .tab-2,

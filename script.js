@@ -50,9 +50,11 @@ function nextSection() {
     alert("saisir une autre option");
     return;
   }
+  
+ 
 
   if (temp < c + count && i == 3) {
-    alert("saisir une autyytytre option");
+    alert("saisir une autre option");
     return;
   }
 
@@ -90,7 +92,8 @@ function voyageurNumberPlus() {
 }
 
 function voyageurNumberMoin() {
-  if (count >= 0) count--;
+  
+  if (count > 0) count--;
 
   voyageurscounter.innerText = count;
   if (adultPrix >= 500) adultPrix -= 500;
@@ -105,7 +108,7 @@ function voyageurEnfantNumberPlus() {
   total();
 }
 function voyageurEnfantNumberMoin() {
-  if (c >= 0) c--;
+  if (c > 0) c--;
 
   voyageurscounterEnfant.innerText = c;
   if (enfantPrix >= 100) enfantPrix -= 100;
@@ -121,10 +124,12 @@ for (let i = 0; i < 8; i++) {
   checkbox[i].onclick = function () {
     checkednbr = document.querySelectorAll(".checkbox:checked");
     if (checkednbr.length > count + c) {
-      this.checked = false;
+      checkbox[i].checked = false;
       alert("dépassé la limite");
     }
     temp = checkednbr.length;
+   
+    
   };
 }
 function PrixCardAdult() {
