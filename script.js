@@ -7,15 +7,25 @@ let sec4 = document.getElementById("tab-4");
 var gare = document.getElementsByClassName("gare");
 var gare2 = document.getElementsByClassName("gare2");
 let depart = document.getElementById("depart");
+let arret = document.getElementById("arret");
 let voyageurscounter = document.getElementById("voyageurscounter");
 let voyageurscounterEnfant = document.getElementById("voyageurscounterEnfant");
 let prixTotal = document.getElementById("prixTotal");
 var voyageurPlMo = document.getElementById("voyageurPlMo");
 var checkbox = document.querySelectorAll(".checkbox");
-
+let prixCard = document.getElementById("prixCard");
+let dateCard = document.getElementById("dateCard");
+var cardContent = document.querySelector(".cardContent");
+var date = document.getElementById("date");
+var checkednbr;
+var temp = 0;
+var tableau = "";
+var table = "";
 var adultPrix = 0;
 var enfantPrix = 0;
 var totale;
+var temp = 0;
+
 var j;
 var k;
 var count = 0;
@@ -25,18 +35,40 @@ var i = 0;
 var tabList = [sec0, sec1, sec2, sec3, sec4];
 
 function nextSection() {
-  i++;
-  // if (i > 4) {
-  //   i = 0;
+  if (date.value === "" && i === 1) {
+    alert("saisir une autre option");
+    return;
+  }
+  if (
+    (depart.value == depart[0].value || arret.value == arret[0].value) &&
+    i === 1
+  ) {
+    alert("saisir une autre option");
+    return;
+  }
+  if (depart.value === arret.value && i === 1) {
+    alert("saisir une autre option");
+    return;
+  }
 
-  // }
+  if (temp < c + count && i == 3) {
+    alert("saisir une autyytytre option");
+    return;
+  }
+
+  i++;
 
   tabList[i].style.display = "flex";
 
   tabList[i].scrollIntoView({ behavior: "auto", display: "block" });
+
   if (i == 4) {
-    PrixCardEnfant();
     PrixCardAdult();
+    PrixCardEnfant();
+  }
+
+  if (i == 4) {
+    next.style.display = "none";
   }
 }
 
@@ -52,6 +84,7 @@ function gareArriver(event) {
 function voyageurNumberPlus() {
   count++;
   voyageurscounter.innerText = count;
+
   adultPrix += 500;
   total();
 }
@@ -73,10 +106,12 @@ function voyageurEnfantNumberPlus() {
 }
 function voyageurEnfantNumberMoin() {
   if (c >= 0) c--;
+
   voyageurscounterEnfant.innerText = c;
   if (enfantPrix >= 100) enfantPrix -= 100;
   total();
 }
+
 function total() {
   totale = adultPrix + enfantPrix;
   prixTotal.innerText = totale;
@@ -84,56 +119,93 @@ function total() {
 
 for (let i = 0; i < 8; i++) {
   checkbox[i].onclick = function () {
-    var checkednbr = document.querySelectorAll(".checkbox:checked");
+    checkednbr = document.querySelectorAll(".checkbox:checked");
     if (checkednbr.length > count + c) {
       this.checked = false;
-      alert("depasser la limite");
+      alert("dépassé la limite");
     }
+    temp = checkednbr.length;
   };
 }
 function PrixCardAdult() {
   for (let z = 0; z < count; z++) {
-    // tableau+=`<span>${ prixCard.textContent=adultPrix }</span>`
     table += `
-          <div id="cardContent"  style="
-            height: 20%;
-            display: flex;
-            flex-wrap:wrap;
-            justify-content: center;
-            align-items: center;
-          ">
-            <div class="user-info">
-              <p>Nom et prénom : <span>AZIZ</span></p>
-              <p>E-mail : <span>test.aziz@gmail.com</span></p>
-              <p >Date de réservation : <span id="dateCard">${
-                date.textContent
-              }</span></p>
-              <p >Prix : <span>${(prixCard.textContent)}</span></p>
-            </div>
-           `;
+          
+            <div class="test">
+        <h4 class="ticket">Ticket</h4>
+        <h4 class="busness">busness class</h4>
 
-    cardContent.innerHTML = table;
+        <div class="passenger">
+          <p>PASSENGER</p>
+          <p class="des">Mr. Boukadia</p>
+        </div>
+        <div class="flight">
+          <p>FLIGHT</p>
+          <p class="des">MA 1024</p>
+        </div>
+        <div class="date">
+          <p>DATE</p>
+          <p class="des">10/10/2024</p>
+        </div>
+
+        <div class="departe">
+          <p>DEPART</p>
+          <p class="des"><span> agadir</span></p>
+        </div>
+        <div class="arrete">
+          <p>ARRET</p>
+          <p class="des"><span> casa</span></p>
+        </div>
+
+        <div class="qrCode">
+          <img src="./9185570.png" alt="" />
+        </div>
+        <div class="bg"></div>
+        <div class="bgr"></div>
+      </div>
+           `;
   }
+  cardContent.innerHTML = table;
 }
 
 function PrixCardEnfant() {
   for (let k = 0; k < c; k++) {
-    // tableau+=`<span>${ prixCard.textContent=adultPrix }</span>`
     tableau += `
-          <div id="cardContent"  style="
-            height: 20%;
-            display: flex;
-            flex-wrap:wrap;
-            justify-content: center;
-            align-items: center;
-          ">
-            <div class="user-info">
-              <p>Nom et prénom : <span>AZIZ</span></p>
-              <p>E-mail : <span>test.aziz@gmail.com</span></p>
-              <p >Date de réservation : <span id="dateCard"></span></p>
-              <p >Prix : <span>${(prixCard.textContent)}</span></p>
-            </div>
+          
+          <div class="test">
+        <h4 class="ticket">Ticket</h4>
+        <h4 class="busness">busness class</h4>
+
+        <div class="passenger">
+          <p>PASSENGER</p>
+          <p class="des">Mr. Boukadia</p>
+        </div>
+        <div class="flight">
+          <p>FLIGHT</p>
+          <p class="des">MA 1024</p>
+        </div>
+        <div class="date">
+          <p>DATE</p>
+          <p class="des">10/10/2024</p>
+        </div>
+
+        <div class="departe">
+          <p>DEPART</p>
+          <p class="des"><span> agadir</span></p>
+        </div>
+        <div class="arrete">
+          <p>ARRET</p>
+          <p class="des"><span> casa</span></p>
+        </div>
+
+        <div class="qrCode">
+          <img src="./9185570.png" alt="" />
+        </div>
+        <div class="bg"></div>
+        <div class="bgr"></div>
+      </div>
+           
            `;
-    cardContent.innerHTML = tableau;
   }
+  cardContent.innerHTML += tableau;
 }

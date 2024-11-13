@@ -78,9 +78,14 @@ body {
   border-radius: 20px;
 
   margin: 80px 0px;
-  height: 400px;
-  /* width: 70%; */
+
   width: 800px;
+}
+.cardContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 #tab-3 {
@@ -94,7 +99,7 @@ body {
   background: aliceblue;
   border-radius: 20px;
   height: 400px;
-  /* width: 70%; */
+
   width: 800px;
 }
 #tab-1 {
@@ -152,6 +157,113 @@ section {
   transform: scale(1.1);
   background-color: antiquewhite;
 }
-#chaise input{
+#chaise input {
   /* display: none; */
 }
+
+.user-info {
+  padding: 20px;
+  background-color: antiquewhite;
+  border-radius: 20px;
+  border: 5px solid red;
+}
+.qr-code {
+  display: flex;
+  flex-direction: column;
+  border-top: 5px solid black;
+}
+.qr-code img {
+  width: 100px;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.test {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+
+  width: 50%;
+
+  justify-content: center;
+  /* align-items: center; */
+  height: 200px;
+}
+tab-4 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.ticket {
+  padding: 10px;
+  background-color: #f8c021;
+  grid-column: 5 span;
+  border-radius: 10px 0px 0px 0px;
+}
+.busness {
+  padding: 10px 0px 0px 0px;
+  background-color: #f8c021;
+
+  border-radius: 0 10px 0 0;
+}
+.flight {
+  margin-top: -20px;
+}
+.passenger {
+  margin-top: -20px;
+  padding: 0 0 0 7px;
+  width: 100px;
+}
+.date {
+  margin-top: -20px;
+  margin-left: 10px;
+}
+.departe {
+  margin-top: -20px;
+  margin-left: 10px;
+}
+.arrete {
+  margin-top: -20px;
+  margin-left: 10px;
+}
+.qrCode {
+  margin-top: -5px;
+
+  height: 90px;
+  grid-column: 6;
+}
+.qrCode img {
+  transform: rotate(90deg);
+  width: 115px;
+}
+.from {
+  margin-top: -20px;
+  margin-left: 10px;
+}
+.bg {
+  grid-column: 4 span;
+  background-color: #f8c021;
+  width: ;
+  height: 12px;
+  margin-right: 10px;
+  margin-right: 10px;
+}
+.bgr {
+  grid-column: 2 span;
+
+  background-color: #f8c021;
+  width: ;
+  height: 12px;
+}
+.des {
+  color: rgb(197, 128, 38);
+  font-size: 13px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/*-------------------------------------------------------------*/
+
+/* 
+
+/*-------------------------------------------------------------*/

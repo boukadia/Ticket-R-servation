@@ -37,8 +37,8 @@
           "
         >
           <option value="">La gare de départ</option>
-          <option value="">agadir</option>
-          <option value="">casa</option>
+          <option value="Agadir">agadir</option>
+          <option value="Casa">casa</option>
         </select>
         <select
           onchange="gareArriver(this)"
@@ -56,10 +56,11 @@
           "
         >
           <option value="">La gare d'arriver</option>
-          <option value="">agadir</option>
-          <option value="">casa</option>
+          <option value="Agadir">agadir</option>
+          <option value="Casa">casa</option>
         </select>
         <input
+          id="date"
           type="date"
           style="
             margin-top: 10px;
@@ -374,25 +375,38 @@
       <div id="tab-4">
         <h1>Les tickets</h1>
 
-        <div
-          style="
-            height: 500px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          "
-        >
-          <div class="card content">
-            <div class="user-info">
-              <p>Nom et prénom : <span>AZIZ</span></p>
-              <p>E-mail : <span>test.aziz@gmail.com</span></p>
-              <p>Date de réservation : <span>12/15/48</span></p>
-              <p>Prix : <span>00000DH</span></p>
+        <div class="cardContent">
+          <div class="test">
+            <h4 class="ticket">Ticket</h4>
+            <h4 class="busness">busness class</h4>
+
+            <div class="passenger">
+              <p>PASSENGER</p>
+              <p class="des">Mr. Boukadia</p>
             </div>
-            <div class="qr-code">
-              <p>Code QR :</p>
-              <img src="qr-code.svg" alt="code QR" />
+            <div class="flight">
+              <p>FLIGHT</p>
+              <p class="des">MA 1024</p>
             </div>
+            <div class="date">
+              <p>DATE</p>
+              <p class="des">10/10/2024</p>
+            </div>
+
+            <div class="departe">
+              <p>DEPART</p>
+              <p class="des"><span> agadir</span></p>
+            </div>
+            <div class="arrete">
+              <p>ARRET</p>
+              <p class="des"><span> casa</span></p>
+            </div>
+
+            <div class="qrCode">
+              <img src="./9185570.png" alt="" />
+            </div>
+            <div class="bg"></div>
+            <div class="bgr"></div>
           </div>
         </div>
       </div>
