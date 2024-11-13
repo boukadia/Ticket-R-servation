@@ -140,21 +140,21 @@ function PrixCardAdult() {
           <p class="des">Mr. Boukadia</p>
         </div>
         <div class="flight">
-          <p>FLIGHT</p>
-          <p class="des">MA 1024</p>
+          <p>Prix</p>
+          <p class="des">500DH</p>
         </div>
         <div class="date">
           <p>DATE</p>
-          <p class="des">10/10/2024</p>
+          <p class="des">${date.value}</p>
         </div>
 
         <div class="departe">
           <p>DEPART</p>
-          <p class="des"><span> agadir</span></p>
+          <p class="des"><span> ${depart.value}</span></p>
         </div>
         <div class="arrete">
           <p>ARRET</p>
-          <p class="des"><span> casa</span></p>
+          <p class="des"><span> ${arret.value}</span></p>
         </div>
 
         <div class="qrCode">
@@ -181,21 +181,21 @@ function PrixCardEnfant() {
           <p class="des">Mr. Boukadia</p>
         </div>
         <div class="flight">
-          <p>FLIGHT</p>
-          <p class="des">MA 1024</p>
+          <p>Prix</p>
+          <p class="des">100DH</p>
         </div>
         <div class="date">
           <p>DATE</p>
-          <p class="des">10/10/2024</p>
+          <p class="des">${date.value}</p>
         </div>
 
         <div class="departe">
           <p>DEPART</p>
-          <p class="des"><span> agadir</span></p>
+          <p class="des"><span> ${depart.value}</span></p>
         </div>
         <div class="arrete">
           <p>ARRET</p>
-          <p class="des"><span> casa</span></p>
+          <p class="des"><span> ${arret.value}</span></p>
         </div>
 
         <div class="qrCode">
